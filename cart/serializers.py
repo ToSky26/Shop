@@ -6,6 +6,7 @@ from .models import CartItem
 
 
 class CartItemSerializer(serializers.ModelSerializer):
+    """Сериализатор корзины с данными товаров."""
     id = serializers.IntegerField(label='Идентификатор позиции',
                                   read_only=True,)
     product = ProductSerializer(read_only=True, label='Товар',)
@@ -22,6 +23,7 @@ class CartItemSerializer(serializers.ModelSerializer):
 
 
 class CartItemWriteSerializer(serializers.ModelSerializer):
+    """Сериализатор для добавления и изменения позиции корзины."""
     class Meta:
         model = CartItem
         fields = ['product', 'quantity']

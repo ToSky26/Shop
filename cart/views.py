@@ -11,6 +11,7 @@ from .serializers import CartItemSerializer, CartItemWriteSerializer
 
 
 class CartViewSet(viewsets.ViewSet):
+    """Обрабатывает операции с корзиной авторизованного пользователя."""
     permission_classes = [IsAuthenticated]
 
     def list(self, request):

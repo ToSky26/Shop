@@ -5,5 +5,6 @@ from .serializers import ProductSerializer
 
 
 class ProductListAPIView(ListAPIView):
+    """Возвращение списка товаров с пагинацией."""
     queryset = Product.objects.all()
     serializer_class = ProductSerializer

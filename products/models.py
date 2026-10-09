@@ -5,6 +5,7 @@ from constants import MAX_NAME_LENGTH, MAX_SLUG_LENGTH
 
 
 class Product(models.Model):
+    """Модель товара."""
     subcategory = models.ForeignKey(
         Subcategory, on_delete=models.CASCADE, related_name='products',
         verbose_name='Подкатегория',

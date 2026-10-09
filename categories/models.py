@@ -4,6 +4,7 @@ from constants import MAX_NAME_LENGTH, MAX_SLUG_LENGTH
 
 
 class Category(models.Model):
+    """Модель категории товаров."""
     name = models.CharField(max_length=MAX_NAME_LENGTH, verbose_name='Название',)
     slug = models.SlugField(unique=True, max_length=MAX_SLUG_LENGTH,
                             verbose_name='Идентификатор',)
@@ -20,6 +21,7 @@ class Category(models.Model):
 
 
 class Subcategory(models.Model):
+    """Модель подкатегории товаров."""
     category = models.ForeignKey(Category, on_delete=models.CASCADE,
                                  related_name='subcategories',
                                  verbose_name='Категория',)

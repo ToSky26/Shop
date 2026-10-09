@@ -4,6 +4,7 @@ from .models import Product
 
 
 class ProductSerializer(serializers.ModelSerializer):
+    """Сериализатор товара."""
     name = serializers.CharField(label='Название', read_only=True)
     slug = serializers.SlugField(label='Идентификатор', read_only=True,)
     category = serializers.CharField(source='subcategory.category.name',

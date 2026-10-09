@@ -4,6 +4,7 @@ from .models import Category, Subcategory
 
 
 class SubcategorySerializer(serializers.ModelSerializer):
+    """Сериализатор подкатегории."""
     id = serializers.IntegerField(label='Идентификатор пользователя',
                                   read_only=True)
     name = serializers.CharField(label='Название')
@@ -16,6 +17,7 @@ class SubcategorySerializer(serializers.ModelSerializer):
 
 
 class CategorySerializer(serializers.ModelSerializer):
+    """Сериализатор категории."""
     id = serializers.IntegerField(label='Идентификатор пользователя',
                                   read_only=True)
     name = serializers.CharField(label='Название')

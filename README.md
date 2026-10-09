@@ -60,11 +60,14 @@ python manage.py runserver
 ```
 После успешного развертывания проект доступен:
 
-Сервер:
-[http://127.0.0.1:8000](http://127.0.0.1:8000)
-
 Админка:
 [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
+
+API продуктов:
+[http://127.0.0.1:8000/api/products/](http://127.0.0.1:8000/api/products/)
+
+API категорий:
+[http://127.0.0.1:8000/api/categories/](http://127.0.0.1:8000/api/categories/)
 
 Документация Swagger:
 [http://127.0.0.1:8000/api/docs/](http://127.0.0.1:8000/api/docs/)

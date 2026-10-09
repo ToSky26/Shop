@@ -5,6 +5,7 @@ from products.models import Product
 
 
 class CartItem(models.Model):
+    """Модель корзины пользователя."""
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL, on_delete=models.CASCADE,
         related_name='cart_items', verbose_name='Пользователь',
@@ -23,4 +24,5 @@ class CartItem(models.Model):
         verbose_name_plural = 'Товары в корзине'
 
     def __str__(self):
+        """Возвращение названия товара и его количество."""
         return f'{self.product.name} — {self.quantity}'
