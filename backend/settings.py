@@ -132,12 +132,18 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
     ],
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
     'DEFAULT_PAGINATION_CLASS': (
         'rest_framework.pagination.PageNumberPagination'
     ),
     'PAGE_SIZE': 10,
 }
 
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Shop',
+    'DESCRIPTION': 'API проекта магазина продуктов',
+    'VERSION': '1.0.0',
+}
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 

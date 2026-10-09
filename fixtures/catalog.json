@@ -1,0 +1,222 @@
+[
+  {
+    "model": "categories.category",
+    "pk": 9001,
+    "fields": {
+      "name": "Молочные продукты",
+      "slug": "dairy-products",
+      "image": "categories/dairy.jpg"
+    }
+  },
+  {
+    "model": "categories.subcategory",
+    "pk": 9001,
+    "fields": {
+      "category": 9001,
+      "name": "Молоко",
+      "slug": "milk",
+      "image": "subcategories/milk.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 9001,
+    "fields": {
+      "subcategory": 9001,
+      "name": "Молоко 3,2%",
+      "slug": "milk-32",
+      "image_small": "products/milk-small.jpg",
+      "image_medium": "products/milk-medium.jpg",
+      "image_large": "products/milk-large.jpg",
+      "price": "89.90"
+    }
+  },
+  {
+    "model": "categories.category",
+    "pk": 9002,
+    "fields": {
+      "name": "Хлебобулочные изделия",
+      "slug": "bakery",
+      "image": "categories/bakery.jpg"
+    }
+  },
+  {
+    "model": "categories.category",
+    "pk": 9003,
+    "fields": {
+      "name": "Фрукты",
+      "slug": "fruits",
+      "image": "categories/fruits.jpg"
+    }
+  },
+  {
+    "model": "categories.category",
+    "pk": 9004,
+    "fields": {
+      "name": "Овощи",
+      "slug": "vegetables",
+      "image": "categories/vegetables.jpg"
+    }
+  },
+  {
+    "model": "categories.subcategory",
+    "pk": 9002,
+    "fields": {
+      "category": 9001,
+      "name": "Сыр",
+      "slug": "cheese",
+      "image": "subcategories/cheese.jpg"
+    }
+  },
+  {
+    "model": "categories.subcategory",
+    "pk": 9003,
+    "fields": {
+      "category": 9001,
+      "name": "Йогурт",
+      "slug": "yogurt",
+      "image": "subcategories/yogurt.jpg"
+    }
+  },
+  {
+    "model": "categories.subcategory",
+    "pk": 9004,
+    "fields": {
+      "category": 9002,
+      "name": "Хлеб",
+      "slug": "bread",
+      "image": "subcategories/bread.jpg"
+    }
+  },
+  {
+    "model": "categories.subcategory",
+    "pk": 9005,
+    "fields": {
+      "category": 9003,
+      "name": "Яблоки",
+      "slug": "apples",
+      "image": "subcategories/apples.jpg"
+    }
+  },
+  {
+    "model": "categories.subcategory",
+    "pk": 9006,
+    "fields": {
+      "category": 9003,
+      "name": "Бананы",
+      "slug": "bananas",
+      "image": "subcategories/bananas.jpg"
+    }
+  },
+  {
+    "model": "categories.subcategory",
+    "pk": 9007,
+    "fields": {
+      "category": 9004,
+      "name": "Картофель",
+      "slug": "potatoes",
+      "image": "subcategories/potatoes.jpg"
+    }
+  },
+  {
+    "model": "categories.subcategory",
+    "pk": 9008,
+    "fields": {
+      "category": 9004,
+      "name": "Помидоры",
+      "slug": "tomatoes",
+      "image": "subcategories/tomatoes.jpg"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 9002,
+    "fields": {
+      "subcategory": 9002,
+      "name": "Сыр Российский",
+      "slug": "russian-cheese",
+      "image_small": "products/cheese-small.jpg",
+      "image_medium": "products/cheese-medium.jpg",
+      "image_large": "products/cheese-large.jpg",
+      "price": "349.90"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 9003,
+    "fields": {
+      "subcategory": 9003,
+      "name": "Йогурт натуральный",
+      "slug": "natural-yogurt",
+      "image_small": "products/yogurt-small.jpg",
+      "image_medium": "products/yogurt-medium.jpg",
+      "image_large": "products/yogurt-large.jpg",
+      "price": "79.90"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 9004,
+    "fields": {
+      "subcategory": 9004,
+      "name": "Хлеб пшеничный",
+      "slug": "wheat-bread",
+      "image_small": "products/bread-small.jpg",
+      "image_medium": "products/bread-medium.jpg",
+      "image_large": "products/bread-large.jpg",
+      "price": "59.90"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 9005,
+    "fields": {
+      "subcategory": 9005,
+      "name": "Яблоки",
+      "slug": "fresh-apples",
+      "image_small": "products/apples-small.jpg",
+      "image_medium": "products/apples-medium.jpg",
+      "image_large": "products/apples-large.jpg",
+      "price": "129.90"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 9006,
+    "fields": {
+      "subcategory": 9006,
+      "name": "Бананы",
+      "slug": "fresh-bananas",
+      "image_small": "products/bananas-small.jpg",
+      "image_medium": "products/bananas-medium.jpg",
+      "image_large": "products/bananas-large.jpg",
+      "price": "99.90"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 9007,
+    "fields": {
+      "subcategory": 9007,
+      "name": "Картофель",
+      "slug": "fresh-potatoes",
+      "image_small": "products/potatoes-small.jpg",
+      "image_medium": "products/potatoes-medium.jpg",
+      "image_large": "products/potatoes-large.jpg",
+      "price": "69.90"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 9008,
+    "fields": {
+      "subcategory": 9008,
+      "name": "Помидоры",
+      "slug": "fresh-tomatoes",
+      "image_small": "products/tomatoes-small.jpg",
+      "image_medium": "products/tomatoes-medium.jpg",
+      "image_large": "products/tomatoes-large.jpg",
+      "price": "159.90"
+    }
+  }
+]

@@ -49,6 +49,11 @@ pip install -r requirements.txt
 python manage.py migrate
 ```
 
+### 5. Загрузить тестовые данные
+```bash
+python manage.py loaddata fixtures/catalog.json
+```
+
 ### 6. Запустить сервер разработки
 ```bash
 python manage.py runserver
@@ -60,6 +65,12 @@ python manage.py runserver
 
 Админка:
 [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/)
+
+Документация Swagger:
+[http://127.0.0.1:8000/api/docs/](http://127.0.0.1:8000/api/docs/)
+
+Схема OpenAPI:
+[http://127.0.0.1:8000/api/schema/](http://127.0.0.1:8000/api/schema/)
 
 ## Автор 
 **ФИО:** Сакаева Александра 

@@ -4,15 +4,20 @@ from .models import Product
 
 
 class ProductSerializer(serializers.ModelSerializer):
+    name = serializers.CharField(label='Название', read_only=True)
+    slug = serializers.SlugField(label='Идентификатор', read_only=True,)
     category = serializers.CharField(source='subcategory.category.name',
-                                     read_only=True,)
+                                     read_only=True, label='Категория',)
     subcategory = serializers.CharField(source='subcategory.name',
-                                        read_only=True,)
-    images = serializers.SerializerMethodField()
+                                        read_only=True, label='Подкатегория',)
+    images = serializers.SerializerMethodField(label='Изображения',)
+    price = serializers.DecimalField(max_digits=10, decimal_places=2,
+                                     label='Цена', read_only=True,)
 
     class Meta:
         model = Product
-        fields = ['name', 'slug', 'category', 'subcategory', 'price', 'images',]
+        fields = ['name', 'slug', 'category',
+                  'subcategory', 'price', 'images',]
 
     def get_images(self, obj):
         return [

@@ -6,8 +6,11 @@ from .models import CartItem
 
 
 class CartItemSerializer(serializers.ModelSerializer):
-    product = ProductSerializer(read_only=True)
-    total_price = serializers.SerializerMethodField()
+    id = serializers.IntegerField(label='Идентификатор позиции',
+                                  read_only=True,)
+    product = ProductSerializer(read_only=True, label='Товар',)
+    total_price = serializers.SerializerMethodField(label='Стоимость позиции',)
+    quantity = serializers.IntegerField(label='Количество', read_only=True,)
 
     class Meta:
         model = CartItem

@@ -4,6 +4,11 @@ from .models import Category, Subcategory
 
 
 class SubcategorySerializer(serializers.ModelSerializer):
+    id = serializers.IntegerField(label='Идентификатор пользователя',
+                                  read_only=True)
+    name = serializers.CharField(label='Название')
+    slug = serializers.SlugField(label='Идентификатор')
+    image = serializers.ImageField(label='Изображение')
 
     class Meta:
         model = Subcategory
@@ -11,7 +16,13 @@ class SubcategorySerializer(serializers.ModelSerializer):
 
 
 class CategorySerializer(serializers.ModelSerializer):
-    subcategories = SubcategorySerializer(many=True, read_only=True,)
+    id = serializers.IntegerField(label='Идентификатор пользователя',
+                                  read_only=True)
+    name = serializers.CharField(label='Название')
+    slug = serializers.SlugField(label='Идентификатор')
+    image = serializers.ImageField(label='Изображение')
+    subcategories = SubcategorySerializer(many=True, read_only=True,
+                                          label='Подкатегории',)
 
     class Meta:
         model = Category
