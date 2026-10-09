@@ -1,9 +1,11 @@
 from django.db import models
 
+from constants import MAX_NAME_LENGTH, MAX_SLUG_LENGTH
+
 
 class Category(models.Model):
-    name = models.CharField(max_length=150, verbose_name='Название',)
-    slug = models.SlugField(unique=True, max_length=170,
+    name = models.CharField(max_length=MAX_NAME_LENGTH, verbose_name='Название',)
+    slug = models.SlugField(unique=True, max_length=MAX_SLUG_LENGTH,
                             verbose_name='Идентификатор',)
     image = models.ImageField(upload_to='categories/',
                               verbose_name='Изображение',)
@@ -21,8 +23,9 @@ class Subcategory(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE,
                                  related_name='subcategories',
                                  verbose_name='Категория',)
-    name = models.CharField(max_length=150, verbose_name='Название',)
-    slug = models.SlugField(unique=True, max_length=170,
+    name = models.CharField(max_length=MAX_NAME_LENGTH,
+                            verbose_name='Название',)
+    slug = models.SlugField(unique=True, max_length=MAX_SLUG_LENGTH,
                             verbose_name='Идентификатор',)
     image = models.ImageField(upload_to='subcategories/',
                               verbose_name='Изображение',)

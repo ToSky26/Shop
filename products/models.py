@@ -1,6 +1,7 @@
 from django.db import models
 
 from categories.models import Subcategory
+from constants import MAX_NAME_LENGTH, MAX_SLUG_LENGTH
 
 
 class Product(models.Model):
@@ -8,8 +9,8 @@ class Product(models.Model):
         Subcategory, on_delete=models.CASCADE, related_name='products',
         verbose_name='Подкатегория',
     )
-    name = models.CharField(max_length=150, verbose_name='Название',)
-    slug = models.SlugField(unique=True, max_length=170,
+    name = models.CharField(max_length=MAX_NAME_LENGTH, verbose_name='Название',)
+    slug = models.SlugField(unique=True, max_length=MAX_SLUG_LENGTH,
                             verbose_name='Идентификатор',)
     image_small = models.ImageField(upload_to='products/',
                                     verbose_name='Маленькое изображение',)
